@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateComponent implements OnInit { // component/class definitaion
 
+  message: string = "Welcome!!"; // member variable
+  date: string = new Date().toDateString();
+
   constructor() { }
 
   ngOnInit(): void {
