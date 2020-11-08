@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateComponent implements OnInit { // component/class definitaion
 
-  message: string = "Welcome!!"; // member variable
-  date: string = new Date().toDateString();
+  message: string; // member variable
+  dateMessage: string;
 
-  constructor() { }
+  constructor() {
+    this.message = "Welcome!!";
+    setInterval(() => { // setInterval api
+      let currentDate = new Date();
+      this.dateMessage = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
+    }, 1000);
+   }
 
   ngOnInit(): void {
   }
