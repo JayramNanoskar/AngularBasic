@@ -1,2 +1,5 @@
 <app-address-card name="John Morgan" [user]="user"></app-address-card>
 <!-- [] - means do not just take inline value as previous, here it evaluates it as a member variable it refers to -->
+<input type="text" [(ngModel)]="inputText"> <!-- two way data binding -->
+{{ inputText }}
+<!-- []- to bind data from component to view and ()- to bind data from view to component -->

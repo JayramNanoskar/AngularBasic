@@ -8,6 +8,7 @@ import { User } from './address-card/user.model';
 })
 export class AppComponent {
   user: User; // member variable
+  inputText: string = "Hello";
 
   constructor(){
     this.user = new User(); //creating new instance and populating data
