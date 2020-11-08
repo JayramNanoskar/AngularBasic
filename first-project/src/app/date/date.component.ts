@@ -22,4 +22,7 @@ export class DateComponent implements OnInit { // component/class definitaion
   ngOnInit(): void {
   }
 
+  addTwoNumbers(a: number, b: number){ // member function
+    return a + b;
+  }
 }
