@@ -11,6 +11,7 @@ export class AddressCardComponent implements OnInit {
   user: any;
   @Input('name') userName: string; // input member variable, will be getting from view
   @Input('user') userObj: User;
+  isCollapsed: boolean = true;
 
   constructor() { 
   }
@@ -22,6 +23,10 @@ export class AddressCardComponent implements OnInit {
       address: this.userObj.address,
       phone: this.userObj.phone
     };
+  }
+
+  toggle(){
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }
