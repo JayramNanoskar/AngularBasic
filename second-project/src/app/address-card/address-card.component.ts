@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-address-card',
@@ -9,19 +10,17 @@ export class AddressCardComponent implements OnInit {
 
   user: any;
   @Input('name') userName: string; // input member variable, will be getting from view
-  
+  @Input('user') userObj: User;
+
   constructor() { 
   }
 
   ngOnInit(): void { // one of the lifecycle hook in angular
     this.user = {
-      name: this.userName,
-      title: "Software Developer",
-      address: "Mumbai, India",
-      phone: [
-        "9998765432",
-        "8978654753"
-      ] 
+      name: this.userObj.name,
+      title: this.userObj.designation,
+      address: this.userObj.address,
+      phone: this.userObj.phone
     };
   }
 
