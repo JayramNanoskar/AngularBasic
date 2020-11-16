@@ -1,1 +1,9 @@
-<p>view-comp works!</p>
+Username: <input type="text" [(ngModel)]="userName"> <!-- two way binding with '[()]' -->
+<button (click)="search()">Search</button> <!-- event handling with '()' -->
+
+<div *ngIf="resp">
+    <p>Login Name: {{ resp?.login }}</p> <!-- checking existance with '?' -->
+    <p>Number of Repos: {{ resp.public_repos }}</p>
+    <p>Number of Gists: {{ resp.public_gists }}</p>
+    <p>Number of Followers: {{ resp.followers }}</p>
+</div>
