@@ -1,0 +1,6 @@
+//Building an Angular project
+npm ->install http-server -g
+http-server -> host a directory on our machine as if it hosting on CDN, we can access it locally
+ng build -> generates static assets i.e. html, css, javascript into one folder(dist) that can be deploy on any CDN
+ng build --prod -> performs AOT(Ahead of time compilation) to optimize/minified the code, resulting performance improvement and hashing is used(in file generation) and get to latest build by caching(incase of changes occure)
+http-server dist/third-proj -> to run server with resources
