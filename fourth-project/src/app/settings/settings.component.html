@@ -1,2 +1,5 @@
 <p>settings works!</p>
+
+<a *ngFor="let route of routes" [routerLink]= "route.url">{{ route.linkName }}</a> <!--doing member variable value lookup with []-->
+
 <router-outlet></router-outlet> <!-- routing area for immediate childs -->

@@ -1,3 +1,11 @@
+<h3>My App</h3>
+<!-- one way -->
+<!--<a [routerLink]= "homeRoute" href="/home">Home</a>--> <!-- href does full page refresh but routerLink directive(used to redirect to link), don't do full page refresh -->
+<!--<a [routerLink]= "settingsRoute" href="/settings">Settings</a>--> <!--doing value lookup with []-->
+
+<!-- other way -->
+<a *ngFor="let route of routes" [routerLink]= "route.url">{{ route.linkName }}</a> <!--doing member variable value lookup with []-->
+
 <router-outlet> <!-- directive for routing -->
     
 </router-outlet>

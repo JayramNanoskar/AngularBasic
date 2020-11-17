@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fourth-project';
+  homeRoute = "home";
+  settingsRoute = "settings";
+  routes = [
+    {linkName: "Home", url: "home"},
+    {linkName: "Settings", url: "settings"}
+  ];
 }
